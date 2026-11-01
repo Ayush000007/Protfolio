@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <!-- Primary SEO Metadata -->
+  <title>Ayush Pratap Singh — Full-Stack Web Developer | Liquid Chrome Portfolio</title>
+  <meta name="description" content="Personal portfolio of Ayush Pratap Singh, a Full-Stack Web Developer and B.Tech CSE student specializing in responsive design, PHP, MySQL, Python, and modern web architecture.">
+  <meta name="keywords" content="Ayush Pratap Singh, Full-Stack Developer, Web Developer Lucknow, PHP Developer, MySQL, Frontend Developer India, Liquid Chrome Portfolio">
+  <meta name="author" content="Ayush Pratap Singh">
+
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://github.com/Ayush000007">
+  <meta property="og:title" content="Ayush Pratap Singh — Full-Stack Web Developer">
+  <meta property="og:description" content="Motivated and detail-oriented Computer Science student building responsive, database-driven web systems with tactile liquid chrome aesthetics.">
+  <meta property="og:image" content="assets/favicon.svg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="apple-touch-icon" href="assets/favicon.svg">
+
+  <!-- Google Fonts: Syne (Display) + DM Sans (Body) + JetBrains Mono (Tech/Data) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+  <!-- Cascading Style Sheets -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <!-- Accessible Skip Link -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- Tactile Film Grain Overlay -->
+  <div class="film-grain" aria-hidden="true"></div>
+
+  <!-- Custom Interaction Cursor (Disabled automatically on touch screens) -->
+  <div class="custom-cursor-dot" aria-hidden="true"></div>
+  <div class="custom-cursor-ring" aria-hidden="true"></div>
+
+  <!-- Liquid Chrome Preloader -->
+  <div class="preloader" aria-hidden="true">
+    <div class="preloader-monogram">APS</div>
+    <div class="preloader-bar-wrap">
+      <div class="preloader-bar"></div>
+    </div>
+    <span class="preloader-count">0%</span>
+  </div>
+
+  <!-- ========================================================================
+       STICKY NAVIGATION HEADER
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="#hero" class="brand" aria-label="Ayush Pratap Singh Portfolio Home">
+        <div class="brand-monogram">A</div>
+        <div class="brand-text">
+          <span class="brand-name">Ayush Pratap Singh</span>
+          <span class="brand-sub">Full-Stack Developer</span>
+        </div>
+      </a>
+
+      <!-- Desktop & Mobile Navigation Menu -->
+      <nav id="site-navigation" aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="#about" class="nav-link"><span class="nav-num">01</span>About</a></li>
+          <li><a href="#projects" class="nav-link"><span class="nav-num">02</span>Projects</a></li>
+          <li><a href="#skills" class="nav-link"><span class="nav-num">03</span>Skills</a></li>
+          <li><a href="#experience" class="nav-link"><span class="nav-num">04</span>Timeline</a></li>
+          <li><a href="#contact" class="nav-link"><span class="nav-num">05</span>Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Hamburger Button -->
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="site-navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       MAIN EDITORIAL CONTENT
+       ======================================================================== -->
+  <main id="main-content">
+    
+    <!-- ----------------------------------------------------------------------
+         HERO SECTION: 3D LIQUID CHROME & EDITORIAL STATEMENT
+         ---------------------------------------------------------------------- -->
+    <section id="hero" class="hero-section">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Editorial Column -->
+          <div class="hero-content">
+            <div class="hero-meta-bar reveal">
+              <span class="status-beacon">
+                <span class="beacon-dot"></span>
+                <span>OPEN FOR ROLES [2026]</span>
+              </span>
+              <span class="mono-tag">26.8467° N, 80.9462° E // LUCKNOW</span>
+            </div>
+
+            <h1 class="hero-title reveal delay-100">
+              Ayush Pratap <span class="title-accent">Singh</span>
+            </h1>
+
+            <div class="hero-role-callout reveal delay-200">
+              <span class="hero-role-label">Full-Stack Web Developer</span>
+              <span class="mono-tag" style="border-left: 1px solid var(--chrome-border-strong); padding-left: 1rem;">B.Tech CSE</span>
+            </div>
+
+            <p class="hero-description reveal delay-300">
+              I build tactile, database-driven web systems that balance clean code architecture with fluid user experiences. Grounded in Ghazipur, studying in Lucknow, and driven by craftsmanship across the entire stack.
+            </p>
+
+            <div class="hero-actions reveal delay-400">
+              <a href="#projects" class="btn btn-chrome">
+                <span>Selected Works</span>
+                <span aria-hidden="true">&darr;</span>
+              </a>
+              <a href="#contact" class="btn btn-ghost">
+                <span>Initiate Contact</span>
+                <span aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- 3D Liquid Chrome Centerpiece -->
+          <div class="hero-canvas-wrap reveal delay-200" aria-label="Interactive 3D liquid chrome sculpture reacting to mouse cursor">
+            <div id="canvas-container">
+              <!-- Three.js Canvas mounts here -->
+            </div>
+            <!-- Accessible Fallback for Reduced-Motion or Unsupported WebGL -->
+            <div class="canvas-fallback" aria-hidden="true"></div>
+            <div class="canvas-hint">
+              <span class="hint-dot"></span>
+              <span>Liquid Chrome Monogram // Move Cursor</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Editorial Telemetry Strip -->
+        <div class="hero-scroll-strip reveal delay-500">
+          <div><span class="mono-accent">&diams;</span> SYSTEM: PHP &bull; MYSQL &bull; JS &bull; PYTHON</div>
+          <div><span class="mono-accent">&diams;</span> CURRENT LOCAL TIME: <span id="live-clock">--:--:-- IST</span></div>
+          <div><span class="mono-accent">&diams;</span> SCROLL TO TRANSMIT</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------------------------
+         SECTION 01: ABOUT & NARRATIVE PROFILE
+         ---------------------------------------------------------------------- -->
+    <section id="about" class="editorial-section">
+      <div class="container">
+        
+        <div class="section-masthead reveal">
+          <span class="section-number">01</span>
+          <div class="section-header-block">
+            <h2 class="section-title">About the Developer</h2>
+            <span class="section-subtitle">Profile &bull; Engineering Ethos &bull; Foundation</span>
+          </div>
+        </div>
+
+        <div class="about-grid">
+          <!-- First-person Authentic Narrative -->
+          <div class="about-narrative reveal delay-100">
+            <p class="lead-paragraph">
+              "Motivated and detail-oriented Computer Science student with a strong passion for full-stack web development and responsive design."
+            </p>
+            <p class="about-body">
+              I am a web developer who cares deeply about how software feels and operates under the hood. Originally from Ghazipur, Uttar Pradesh, and currently pursuing my B.Tech in Computer Science & Engineering in Lucknow, I have spent the last few years developing practical web solutions — from responsive client interfaces to secure, database-backed platforms.
+            </p>
+            <p class="about-body">
+              My engineering foundation is built on practical implementation: writing clean, semantic HTML and CSS, crafting dynamic front-end behaviors with JavaScript, and architecting robust back-end logic using PHP, Python, Java, and MySQL. I don't rely on bloated templates or opaque black boxes — every line of code is structured for clarity, performance, and real-world durability.
+            </p>
+            <div style="margin-top: 1rem;">
+              <span class="mono-tag">SPOKEN LANGUAGES:</span>
+              <div style="margin-top: 0.5rem; display: flex; gap: 0.75rem;">
+                <span class="skill-pill" style="font-size: 0.76rem; padding: 0.4rem 1rem;">English (Professional)</span>
+                <span class="skill-pill" style="font-size: 0.76rem; padding: 0.4rem 1rem;">Hindi (Native)</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Key Data Specs Card -->
+          <div class="about-specs-card reveal delay-200">
+            <div class="spec-item">
+              <span class="spec-label">Specialization</span>
+              <span class="spec-value">Full-Stack Web Development &amp; Responsive UI</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Current Academic Standing</span>
+              <span class="spec-value">B.Tech CSE — GCRG Group of Institutions (2025–Present)</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Previous Credential</span>
+              <span class="spec-value">Diploma in CSE — Govt. Polytechnic, Jaunpur (2023–2025)</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Locations</span>
+              <span class="spec-value">Ghazipur, UP (Hometown) &bull; Lucknow, UP (Current)</span>
+            </div>
+            <div class="spec-item">
+              <span class="spec-label">Status</span>
+              <span class="spec-value" style="color: var(--accent-crimson); font-weight: 700;">Open for Internships &amp; Full-Time Roles</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------------------------
+         SECTION 02: SELECTED WORKS (PROJECTS)
+         Stacked editorial list with liquid-metal hover shimmers
+         ---------------------------------------------------------------------- -->
+    <section id="projects" class="editorial-section">
+      <div class="container">
+        
+        <div class="section-masthead reveal">
+          <span class="section-number">02</span>
+          <div class="section-header-block">
+            <h2 class="section-title">Selected Projects</h2>
+            <span class="section-subtitle">Real Implementations &bull; Production Architectures</span>
+          </div>
+        </div>
+
+        <div class="projects-stack">
+
+          <!-- Project 01: Hotel Management Website -->
+          <article class="project-item reveal">
+            <div class="project-index">
+              <span>[01]</span>
+              <span class="mono-tag" style="font-size: 0.65rem; margin-top: 0.25rem;">FRONTEND</span>
+            </div>
+            <div class="project-content">
+              <div class="project-header-row">
+                <h3 class="project-title">Hotel Management Website</h3>
+              </div>
+              <p class="project-desc">
+                A fully responsive hospitality frontend built with structured semantic HTML, modern CSS, dynamic JavaScript, and Bootstrap. Designed with intuitive room browsing, interactive amenities showcase, and seamless booking reservation flows tested across diverse viewport resolutions.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Bootstrap</span>
+                <span class="tech-tag">Responsive UI</span>
+              </div>
+            </div>
+            <div class="project-actions">
+              <a href="#" class="btn btn-chrome btn-sm" aria-label="View live demo of Hotel Management Website">
+                <span>Live Demo</span>
+                <span aria-hidden="true">&nearr;</span>
+              </a>
+              <a href="#" class="btn btn-ghost btn-sm" aria-label="View Hotel Management source code on GitHub">
+                <span>GitHub</span>
+                <span aria-hidden="true">&boxbox;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 02: Job and Job News Website -->
+          <article class="project-item reveal delay-100">
+            <div class="project-index">
+              <span>[02]</span>
+              <span class="mono-tag" style="font-size: 0.65rem; margin-top: 0.25rem;">PORTAL</span>
+            </div>
+            <div class="project-content">
+              <div class="project-header-row">
+                <h3 class="project-title">Job and Job News Website</h3>
+              </div>
+              <p class="project-desc">
+                A modern responsive employment portal engineered for comprehensive cross-device compatibility. Focuses on speed and readability, featuring job alert categorization, structured filterable role postings, and clear layout hierarchies for candidates seeking career updates.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Bootstrap</span>
+                <span class="tech-tag">Information Architecture</span>
+              </div>
+            </div>
+            <div class="project-actions">
+              <a href="#" class="btn btn-chrome btn-sm" aria-label="View live demo of Job and Job News Website">
+                <span>Live Demo</span>
+                <span aria-hidden="true">&nearr;</span>
+              </a>
+              <a href="#" class="btn btn-ghost btn-sm" aria-label="View Job and Job News source code on GitHub">
+                <span>GitHub</span>
+                <span aria-hidden="true">&boxbox;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 03: Clinic & Rehabilitation Website -->
+          <article class="project-item reveal delay-200">
+            <div class="project-index">
+              <span>[03]</span>
+              <span class="mono-tag" style="font-size: 0.65rem; margin-top: 0.25rem;">HEALTHCARE</span>
+            </div>
+            <div class="project-content">
+              <div class="project-header-row">
+                <h3 class="project-title">Clinic &amp; Rehabilitation Website</h3>
+              </div>
+              <p class="project-desc">
+                A professional healthcare and therapy interface prioritizing accessibility standards, clear typography, and responsive patient appointment layouts. Built with high-contrast UI elements, detailed doctor consultation schedules, and structured department navigation.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">Bootstrap</span>
+                <span class="tech-tag">Accessibility (A11y)</span>
+              </div>
+            </div>
+            <div class="project-actions">
+              <a href="#" class="btn btn-chrome btn-sm" aria-label="View live demo of Clinic and Rehabilitation Website">
+                <span>Live Demo</span>
+                <span aria-hidden="true">&nearr;</span>
+              </a>
+              <a href="#" class="btn btn-ghost btn-sm" aria-label="View Clinic and Rehabilitation source code on GitHub">
+                <span>GitHub</span>
+                <span aria-hidden="true">&boxbox;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 04: PopNShop (E-commerce) -->
+          <article class="project-item reveal delay-300">
+            <div class="project-index">
+              <span>[04]</span>
+              <span class="mono-tag" style="font-size: 0.65rem; margin-top: 0.25rem;">FULL-STACK</span>
+            </div>
+            <div class="project-content">
+              <div class="project-header-row">
+                <h3 class="project-title">PopNShop (E-Commerce)</h3>
+                <span class="project-status-badge">In Progress</span>
+              </div>
+              <p class="project-desc">
+                A full-stack e-commerce web platform developed in PHP. Engineered with a responsive dynamic product catalog, interactive cart state management, modular server-side script handling, and structured database queries for reliable inventory browsing.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">HTML5 / CSS3</span>
+                <span class="tech-tag">E-Commerce Logic</span>
+              </div>
+            </div>
+            <div class="project-actions">
+              <a href="#" class="btn btn-chrome btn-sm" aria-label="View live demo of PopNShop">
+                <span>Live Demo</span>
+                <span aria-hidden="true">&nearr;</span>
+              </a>
+              <a href="#" class="btn btn-ghost btn-sm" aria-label="View PopNShop source code on GitHub">
+                <span>GitHub</span>
+                <span aria-hidden="true">&boxbox;</span>
+              </a>
+            </div>
+          </article>
+
+          <!-- Project 05: Attendance Management System -->
+          <article class="project-item reveal delay-400">
+            <div class="project-index">
+              <span>[05]</span>
+              <span class="mono-tag" style="font-size: 0.65rem; margin-top: 0.25rem;">SYSTEM</span>
+            </div>
+            <div class="project-content">
+              <div class="project-header-row">
+                <h3 class="project-title">Attendance Management System</h3>
+              </div>
+              <p class="project-desc">
+                An institutional web application built with PHP and MySQL for real-time attendance logging. Implements secure role-based session authentication, daily check-in verification, parameterized SQL data models, and automated report generation for attendance auditing.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tech-tag">PHP</span>
+                <span class="tech-tag">MySQL</span>
+                <span class="tech-tag">Authentication</span>
+                <span class="tech-tag">Reporting Engine</span>
+                <span class="tech-tag">SQL Modeling</span>
+              </div>
+            </div>
+            <div class="project-actions">
+              <a href="#" class="btn btn-chrome btn-sm" aria-label="View live demo of Attendance Management System">
+                <span>Live Demo</span>
+                <span aria-hidden="true">&nearr;</span>
+              </a>
+              <a href="#" class="btn btn-ghost btn-sm" aria-label="View Attendance Management System source code on GitHub">
+                <span>GitHub</span>
+                <span aria-hidden="true">&boxbox;</span>
+              </a>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------------------------
+         SECTION 03: CORE STACK (SKILLS)
+         Inflated 3D Chrome Pills (No fake percentages or progress bars)
+         ---------------------------------------------------------------------- -->
+    <section id="skills" class="editorial-section">
+      <div class="container">
+        
+        <div class="section-masthead reveal">
+          <span class="section-number">03</span>
+          <div class="section-header-block">
+            <h2 class="section-title">Technical Capabilities</h2>
+            <span class="section-subtitle">Tactile Chrome Tooling &bull; Hand-Crafted Proficiency</span>
+          </div>
+        </div>
+
+        <div class="skills-container">
+
+          <!-- Category 1: Frontend -->
+          <div class="skill-category reveal">
+            <div class="skill-cat-header">
+              <span class="mono-tag">01 // FRONTEND ARCHITECTURE</span>
+              <div class="skill-cat-line"></div>
+            </div>
+            <div class="skill-pills-wrap">
+              <div class="skill-pill"><span>HTML5 (Semantic)</span></div>
+              <div class="skill-pill"><span>CSS3 (Custom Properties &amp; Grid)</span></div>
+              <div class="skill-pill"><span>JavaScript (ES6+)</span></div>
+              <div class="skill-pill"><span>Bootstrap Framework</span></div>
+              <div class="skill-pill"><span>Responsive Web Design</span></div>
+            </div>
+          </div>
+
+          <!-- Category 2: Backend -->
+          <div class="skill-category reveal delay-100">
+            <div class="skill-cat-header">
+              <span class="mono-tag">02 // BACKEND LOGIC &amp; SERVICES</span>
+              <div class="skill-cat-line"></div>
+            </div>
+            <div class="skill-pills-wrap">
+              <div class="skill-pill"><span>PHP (Object-Oriented &amp; Procedural)</span></div>
+              <div class="skill-pill"><span>Python</span></div>
+              <div class="skill-pill"><span>Java</span></div>
+              <div class="skill-pill"><span>RESTful Form Endpoints</span></div>
+              <div class="skill-pill"><span>Session &amp; Auth Systems</span></div>
+            </div>
+          </div>
+
+          <!-- Category 3: Database -->
+          <div class="skill-category reveal delay-200">
+            <div class="skill-cat-header">
+              <span class="mono-tag">03 // DATABASE &amp; STORAGE</span>
+              <div class="skill-cat-line"></div>
+            </div>
+            <div class="skill-pills-wrap">
+              <div class="skill-pill"><span>MySQL</span></div>
+              <div class="skill-pill"><span>Relational Schema Modeling</span></div>
+              <div class="skill-pill"><span>CRUD &amp; Parameterized Queries</span></div>
+              <div class="skill-pill"><span>Database Optimization</span></div>
+            </div>
+          </div>
+
+          <!-- Category 4: Soft Skills -->
+          <div class="skill-category reveal delay-300">
+            <div class="skill-cat-header">
+              <span class="mono-tag">04 // PROFESSIONAL &amp; COLLABORATIVE DYNAMICS</span>
+              <div class="skill-cat-line"></div>
+            </div>
+            <div class="skill-pills-wrap">
+              <div class="skill-pill"><span>Teamwork</span></div>
+              <div class="skill-pill"><span>Time Management</span></div>
+              <div class="skill-pill"><span>Communication</span></div>
+              <div class="skill-pill"><span>Negotiation</span></div>
+              <div class="skill-pill"><span>Critical Thinking</span></div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------------------------
+         SECTION 04: EXPERIENCE & EDUCATION TIMELINE
+         Vertical timeline with chrome connectors & pulsing crimson current node
+         ---------------------------------------------------------------------- -->
+    <section id="experience" class="editorial-section">
+      <div class="container">
+        
+        <div class="section-masthead reveal">
+          <span class="section-number">04</span>
+          <div class="section-header-block">
+            <h2 class="section-title">Experience &amp; Education</h2>
+            <span class="section-subtitle">Career Milestones &bull; Academic Path</span>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 3.5rem;">
+          
+          <!-- Experience Timeline Column -->
+          <div>
+            <h3 style="font-size: 1.35rem; margin-bottom: 2rem; color: var(--chrome-highlight); font-family: var(--font-display);">
+              Professional Experience &amp; Training
+            </h3>
+            
+            <div class="timeline">
+              
+              <!-- Softflew Technologies (Current / Most Recent) -->
+              <div class="timeline-item active-role reveal">
+                <div class="timeline-node" title="Active / Latest Role"></div>
+                <div class="timeline-card">
+                  <div class="timeline-header">
+                    <span class="timeline-role">Apprenticeship</span>
+                    <span class="timeline-date">Jul 2025 &ndash; Jan 2026</span>
+                  </div>
+                  <div class="timeline-company">Softflew Technologies &bull; Lucknow</div>
+                  <p class="timeline-desc">
+                    Engineered full-stack web projects utilizing PHP and database systems. Contributed to end-to-end development lifecycles, robust code reviews, and server-side feature deployment.
+                  </p>
+                </div>
+              </div>
+
+              <!-- KK Infotech Solutions -->
+              <div class="timeline-item reveal delay-100">
+                <div class="timeline-node"></div>
+                <div class="timeline-card">
+                  <div class="timeline-header">
+                    <span class="timeline-role">Remote Internship</span>
+                    <span class="timeline-date">Aug 2025 &ndash; Dec 2025</span>
+                  </div>
+                  <div class="timeline-company">KK Infotech Solutions &bull; Jaipur (Remote)</div>
+                  <p class="timeline-desc">
+                    Built and maintained responsive and user-friendly web interfaces with HTML, CSS, JavaScript, PHP, and MySQL. Collaborated across distributed teams to deliver clean client-facing components.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Codec Technologies -->
+              <div class="timeline-item reveal delay-200">
+                <div class="timeline-node"></div>
+                <div class="timeline-card">
+                  <div class="timeline-header">
+                    <span class="timeline-role">Web Developer Intern</span>
+                    <span class="timeline-date">Sept 2025 &ndash; Nov 2025</span>
+                  </div>
+                  <div class="timeline-company">Codec Technologies &bull; Hybrid</div>
+                  <p class="timeline-desc">
+                    Specialized in responsive web design, project development sprints, and collaborative team coding. Refactored legacy UI components for enhanced cross-browser stability.
+                  </p>
+                </div>
+              </div>
+
+              <!-- DigiCoders Technologies -->
+              <div class="timeline-item reveal delay-300">
+                <div class="timeline-node"></div>
+                <div class="timeline-card">
+                  <div class="timeline-header">
+                    <span class="timeline-role">Summer Training</span>
+                    <span class="timeline-date">2024</span>
+                  </div>
+                  <div class="timeline-company">DigiCoders Technologies &bull; Lucknow</div>
+                  <p class="timeline-desc">
+                    Intensive training in Java fundamentals and frontend web architecture. Directly applied core principles toward engineering the Hotel Management web system.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Education Timeline Column -->
+          <div>
+            <h3 style="font-size: 1.35rem; margin-bottom: 2rem; color: var(--chrome-highlight); font-family: var(--font-display);">
+              Academic Credentials
+            </h3>
+
+            <div class="timeline">
+              
+              <!-- B.Tech in CSE -->
+              <div class="timeline-item active-role reveal">
+                <div class="timeline-node" title="Current Degree"></div>
+                <div class="timeline-card">
+                  <div class="timeline-header">
+                    <span class="timeline-role">B.Tech &mdash; Computer Science &amp; Engineering</span>
+                    <span class="timeline-date">2025 &ndash; Present</span>
+                  </div>
+                  <div class="timeline-company">GCRG Group of Institutions &bull; Lucknow, UP</div>
+                  <p class="timeline-desc">
+                    Focusing on advanced data structures, database engineering, computer networks, and full-stack system architecture.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Diploma in CSE -->
+              <div class="timeline-item reveal delay-100">
+                <div class="timeline-node"></div>
+                <div class="timeline-card">
+                  <div class="timeline-header">
+                    <span class="timeline-role">Diploma &mdash; Computer Science &amp; Engineering</span>
+                    <span class="timeline-date">2023 &ndash; 2025</span>
+                  </div>
+                  <div class="timeline-company">Government Polytechnic &bull; Jaunpur, UP</div>
+                  <p class="timeline-desc">
+                    Comprehensive study of core software engineering, algorithms, relational database fundamentals, and web technologies.
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ----------------------------------------------------------------------
+         SECTION 05: CONTACT / TRANSMISSION
+         Large clickable coordinates, socials & working AJAX/PHP form
+         ---------------------------------------------------------------------- -->
+    <section id="contact" class="editorial-section">
+      <div class="container">
+        
+        <div class="section-masthead reveal">
+          <span class="section-number">05</span>
+          <div class="section-header-block">
+            <h2 class="section-title">Transmission / Contact</h2>
+            <span class="section-subtitle">Direct Lines &bull; Open Channels</span>
+          </div>
+        </div>
+
+        <div class="contact-layout">
+          
+          <!-- Direct Links Column -->
+          <div class="contact-meta-col reveal">
+            <h3 class="contact-headline">
+              Let's build <br>something <span style="color: var(--accent-crimson);">solid</span>.
+            </h3>
+            
+            <p style="font-size: 1.05rem; color: var(--text-secondary);">
+              Whether you're looking for an enthusiastic full-stack developer for your team, have a project in mind, or simply want to connect, my inbox is open.
+            </p>
+
+            <div class="contact-direct-list">
+              <div class="direct-contact-item">
+                <span class="mono-tag">EMAIL TRANSMISSION</span>
+                <a href="mailto:ayushpratapsinghgzp@gmail.com" class="direct-link">
+                  ayushpratapsinghgzp@gmail.com
+                </a>
+              </div>
+
+              <div class="direct-contact-item">
+                <span class="mono-tag">TELEPHONE</span>
+                <a href="tel:+917905946473" class="direct-link">
+                  +91 7905946473
+                </a>
+              </div>
+
+              <div class="direct-contact-item">
+                <span class="mono-tag">LOCATION</span>
+                <span class="direct-link" style="color: var(--chrome-base);">
+                  Ghazipur / Lucknow, Uttar Pradesh, India
+                </span>
+              </div>
+            </div>
+
+            <!-- Social Links -->
+            <div>
+              <span class="mono-tag" style="display: block; margin-bottom: 0.85rem;">NETWORK PROFILES</span>
+              <div class="socials-cluster">
+                <a href="https://linkedin.com/in/ayush-pratap-singh-0a5877326" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm">
+                  <span>LinkedIn</span>
+                  <span aria-hidden="true">&nearr;</span>
+                </a>
+                <a href="https://github.com/Ayush000007" target="_blank" rel="noopener noreferrer" class="btn btn-ghost btn-sm">
+                  <span>GitHub</span>
+                  <span aria-hidden="true">&nearr;</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Contact Form Card -->
+          <div class="contact-form-card reveal delay-100">
+            <form id="contact-form" class="contact-form" action="contact.php" method="POST" novalidate>
+              <div class="form-group">
+                <label for="name" class="form-label">Your Name</label>
+                <input type="text" id="name" name="name" class="form-input" placeholder="e.g. Maya Sharma" required autocomplete="name">
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="name@company.com" required autocomplete="email">
+              </div>
+
+              <div class="form-group">
+                <label for="subject" class="form-label">Subject</label>
+                <input type="text" id="subject" name="subject" class="form-input" placeholder="Role Inquiry / Project Collaboration">
+              </div>
+
+              <div class="form-group">
+                <label for="message" class="form-label">Message Details</label>
+                <textarea id="message" name="message" class="form-textarea" placeholder="Tell me about your team or project requirements..." required></textarea>
+              </div>
+
+              <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
+
+              <button type="submit" class="btn btn-chrome" style="align-self: flex-start;">
+                <span>Transmit Message</span>
+                <span aria-hidden="true">&rarr;</span>
+              </button>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand-line">
+        <span class="mono-tag">&copy; 2026 AYUSH PRATAP SINGH</span>
+        <span class="mono-tag" style="color: var(--chrome-border-strong);">&bull;</span>
+        <span class="footer-copy">Crafted with semantic code and liquid chrome physics.</span>
+      </div>
+      <div class="footer-links">
+        <a href="#hero" class="footer-link">Back to Top &uarr;</a>
+        <a href="https://github.com/Ayush000007" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
+        <a href="https://linkedin.com/in/ayush-pratap-singh-0a5877326" target="_blank" rel="noopener noreferrer" class="footer-link">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Three.js Library CDN (r128) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- Modular Application Scripts -->
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

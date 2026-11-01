@@ -1,0 +1,639 @@
+/* ==========================================================================
+   LIQUID CHROME - REUSABLE COMPONENTS & TACTILE UI
+   Portfolio of Ayush Pratap Singh
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Inflated Chrome Buttons & Interactive Controls
+   -------------------------------------------------------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  padding: 0.85rem 1.85rem;
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  position: relative;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast);
+  user-select: none;
+}
+
+/* Puffy 3D Inflated Chrome Button */
+.btn-chrome {
+  background: linear-gradient(135deg, #F2F4F7 0%, #C9CDD3 35%, #8A909A 70%, #E3E7ED 100%);
+  color: #0A0A0C;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  box-shadow:
+    inset 0 2px 2px rgba(255, 255, 255, 0.95),
+    inset 0 -2px 3px rgba(80, 85, 95, 0.5),
+    0 8px 20px rgba(0, 0, 0, 0.55);
+}
+
+.btn-chrome:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-crimson);
+  box-shadow:
+    inset 0 2px 3px rgba(255, 255, 255, 1),
+    inset 0 -2px 3px rgba(80, 85, 95, 0.5),
+    0 12px 28px rgba(0, 0, 0, 0.7),
+    0 0 20px var(--accent-crimson-glow);
+}
+
+.btn-chrome:active {
+  transform: translateY(1px);
+  box-shadow:
+    inset 0 1px 2px rgba(0, 0, 0, 0.4),
+    0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+/* Dark Obsidian Raised Button */
+.btn-ghost {
+  background: var(--bg-surface);
+  color: var(--chrome-highlight);
+  border: 1px solid var(--chrome-border-strong);
+  box-shadow:
+    inset 0 1px 1px rgba(242, 244, 247, 0.2),
+    0 4px 14px rgba(0, 0, 0, 0.4);
+}
+
+.btn-ghost:hover {
+  transform: translateY(-2px);
+  color: #FFFFFF;
+  border-color: var(--accent-crimson);
+  box-shadow:
+    inset 0 1px 1px rgba(255, 26, 60, 0.3),
+    0 8px 20px rgba(0, 0, 0, 0.6),
+    0 0 16px var(--accent-crimson-subtle);
+}
+
+.btn-ghost:active {
+  transform: translateY(1px);
+}
+
+/* Small Button Variant for Projects */
+.btn-sm {
+  padding: 0.55rem 1.15rem;
+  font-size: 0.74rem;
+}
+
+/* --------------------------------------------------------------------------
+   Inflated Chrome Skill Pills
+   -------------------------------------------------------------------------- */
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.skill-category {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.skill-cat-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.skill-cat-line {
+  height: 1px;
+  flex-grow: 1;
+  background: var(--chrome-border);
+}
+
+.skill-pills-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+}
+
+/* 3D Inflated Soft-Bodied Chrome Pill */
+.skill-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1.25rem;
+  border-radius: 999px;
+  background: linear-gradient(145deg, #181920 0%, #0E0E12 100%);
+  border: 1px solid var(--chrome-border-strong);
+  color: var(--chrome-highlight);
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  box-shadow:
+    inset 0 1.5px 1px rgba(242, 244, 247, 0.35),
+    inset 0 -1.5px 2px rgba(0, 0, 0, 0.9),
+    0 4px 12px rgba(0, 0, 0, 0.45);
+  transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+  cursor: default;
+}
+
+.skill-pill::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: var(--chrome-shadow);
+  transition: background-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.skill-pill:hover {
+  transform: translateY(-3px) scale(1.02);
+  border-color: var(--accent-crimson);
+  color: #FFFFFF;
+  box-shadow:
+    inset 0 1.5px 1px rgba(255, 255, 255, 0.6),
+    0 8px 20px rgba(0, 0, 0, 0.6),
+    0 0 15px var(--accent-crimson-subtle);
+}
+
+.skill-pill:hover::before {
+  background-color: var(--accent-crimson);
+  box-shadow: 0 0 6px var(--accent-crimson);
+}
+
+/* --------------------------------------------------------------------------
+   Stacked Projects Editorial List
+   -------------------------------------------------------------------------- */
+.projects-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.project-item {
+  position: relative;
+  background: var(--bg-surface);
+  border: 1px solid var(--chrome-border);
+  border-radius: 14px;
+  padding: clamp(1.75rem, 3.5vw, 3rem);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+  transition: border-color var(--transition-normal), transform var(--transition-normal), box-shadow var(--transition-normal);
+  display: grid;
+  grid-template-columns: 80px 1fr auto;
+  gap: 2rem;
+  align-items: center;
+}
+
+.project-item:hover {
+  border-color: var(--chrome-border-strong);
+  transform: translateY(-4px);
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.7),
+    0 0 1px var(--chrome-highlight);
+}
+
+.project-index {
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.project-header-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.project-title {
+  font-size: clamp(1.35rem, 2.2vw, 1.95rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--chrome-highlight);
+  transition: color var(--transition-fast);
+}
+
+/* Chrome shimmer effect on title hover */
+.project-item:hover .project-title {
+  background: linear-gradient(90deg, #C9CDD3 0%, #FFFFFF 35%, #FF1A3C 50%, #FFFFFF 65%, #C9CDD3 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: chromeShimmer 3s linear infinite;
+}
+
+.project-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: rgba(255, 26, 60, 0.12);
+  border: 1px solid rgba(255, 26, 60, 0.4);
+  color: var(--accent-crimson);
+}
+
+.project-desc {
+  font-size: 0.96rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  max-width: 65ch;
+}
+
+.project-tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.tech-tag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  padding: 0.2rem 0.65rem;
+  border-radius: 4px;
+  background: var(--bg-surface-raised);
+  border: 1px solid rgba(201, 205, 211, 0.12);
+  color: var(--chrome-base);
+}
+
+.project-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-width: 130px;
+}
+
+@media (max-width: 900px) {
+  .project-item {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .project-index {
+    font-size: 1.15rem;
+  }
+
+  .project-actions {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Experience & Education Vertical Timeline
+   -------------------------------------------------------------------------- */
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding-left: 2.5rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 8px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--accent-crimson) 0%, var(--chrome-border-strong) 40%, rgba(201, 205, 211, 0.08) 100%);
+}
+
+.timeline-item {
+  position: relative;
+}
+
+.timeline-node {
+  position: absolute;
+  top: 1.4rem;
+  left: -2.5rem;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--bg-primary);
+  border: 2px solid var(--chrome-shadow);
+  z-index: 2;
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.timeline-item.active-role .timeline-node {
+  border-color: var(--accent-crimson);
+  background: var(--accent-crimson);
+  box-shadow: 0 0 12px var(--accent-crimson);
+  animation: pulseBeacon 2s infinite ease-in-out;
+}
+
+.timeline-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--chrome-border);
+  border-radius: 12px;
+  padding: 1.75rem clamp(1.25rem, 3vw, 2rem);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.timeline-card:hover {
+  transform: translateX(4px);
+  border-color: var(--chrome-border-strong);
+}
+
+.timeline-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.timeline-role {
+  font-family: var(--font-display);
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: var(--chrome-highlight);
+}
+
+.timeline-company {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--chrome-base);
+}
+
+.timeline-date {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  color: var(--accent-crimson);
+}
+
+.timeline-desc {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   Contact Form & Transmission Details
+   -------------------------------------------------------------------------- */
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: clamp(2.5rem, 6vw, 6rem);
+  align-items: start;
+}
+
+.contact-meta-col {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.contact-headline {
+  font-size: clamp(2.2rem, 4.5vw, 3.8rem);
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--chrome-highlight);
+}
+
+.contact-direct-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.direct-contact-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.direct-link {
+  font-family: var(--font-mono);
+  font-size: clamp(1rem, 1.6vw, 1.35rem);
+  color: var(--chrome-highlight);
+  letter-spacing: -0.01em;
+  transition: color var(--transition-fast);
+}
+
+.direct-link:hover {
+  color: var(--accent-crimson);
+}
+
+.socials-cluster {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Contact Form */
+.contact-form-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--chrome-border);
+  border-radius: 16px;
+  padding: clamp(1.75rem, 4vw, 3rem);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.55);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 0.85rem 1.15rem;
+  background: var(--bg-surface-raised);
+  border: 1px solid var(--chrome-border);
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--chrome-highlight);
+  outline: none;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.form-textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  border-color: var(--accent-crimson);
+  box-shadow: 0 0 0 3px var(--accent-crimson-subtle);
+}
+
+.form-status {
+  padding: 0.85rem 1.15rem;
+  border-radius: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  display: none;
+}
+
+.form-status.success {
+  display: block;
+  background: rgba(201, 205, 211, 0.08);
+  border: 1px solid var(--chrome-highlight);
+  color: var(--chrome-highlight);
+}
+
+.form-status.error {
+  display: block;
+  background: var(--accent-crimson-subtle);
+  border: 1px solid var(--accent-crimson);
+  color: #FFA3B0;
+}
+
+@media (max-width: 900px) {
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Liquid Chrome Preloader
+   -------------------------------------------------------------------------- */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bg-primary);
+  z-index: 10000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  transition: opacity 0.6s var(--ease-fluid), visibility 0.6s;
+}
+
+.preloader.fade-out {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.preloader-monogram {
+  font-family: var(--font-display);
+  font-size: 4rem;
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  background: linear-gradient(135deg, #6B7078 0%, #F2F4F7 50%, #2A2D34 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: chromeShimmer 2.5s infinite linear;
+}
+
+.preloader-bar-wrap {
+  width: 180px;
+  height: 2px;
+  background: rgba(201, 205, 211, 0.12);
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.preloader-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--chrome-base), var(--accent-crimson));
+  transition: width 0.25s ease;
+}
+
+.preloader-count {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   Custom Cursor (Laser Crimson Dot + Chrome Ring)
+   -------------------------------------------------------------------------- */
+.custom-cursor-dot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 6px;
+  background-color: var(--accent-crimson);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.2s ease, transform 0.1s ease;
+  box-shadow: 0 0 8px var(--accent-crimson);
+}
+
+.custom-cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--chrome-base);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 99998;
+  transform: translate(-50%, -50%);
+  transition: width 0.25s var(--ease-fluid), height 0.25s var(--ease-fluid), border-color 0.25s ease, background 0.25s ease, opacity 0.2s ease;
+}
+
+.custom-cursor-ring.hovered {
+  width: 52px;
+  height: 52px;
+  border-color: var(--accent-crimson);
+  background: var(--accent-crimson-subtle);
+}
+
+/* Touch devices: hide custom cursor completely */
+@media (hover: none) and (pointer: coarse) {
+  .custom-cursor-dot,
+  .custom-cursor-ring {
+    display: none !important;
+  }
+}

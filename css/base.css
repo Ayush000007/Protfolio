@@ -1,0 +1,228 @@
+/* ==========================================================================
+   LIQUID CHROME - BASE STYLES & DESIGN TOKENS
+   Portfolio of Ayush Pratap Singh | Full-Stack Web Developer
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Design Tokens & Strict Color Palette
+   Obsidian Black + Liquid Chrome Silver + Laser Crimson Red (Accents Only)
+   -------------------------------------------------------------------------- */
+:root {
+  /* Obsidian Black Spectrum */
+  --bg-primary: #0A0A0C;
+  --bg-surface: #121216;
+  --bg-surface-raised: #17171D;
+  --bg-surface-subtle: #1C1D24;
+
+  /* Chrome Silver Spectrum */
+  --chrome-base: #C9CDD3;
+  --chrome-highlight: #F2F4F7;
+  --chrome-shadow: #6B7078;
+  --chrome-deep: #2A2D34;
+  --chrome-border: rgba(201, 205, 211, 0.16);
+  --chrome-border-strong: rgba(201, 205, 211, 0.38);
+
+  /* Laser Crimson Accent (Strictly reserved for key highlights & interactions) */
+  --accent-crimson: #FF1A3C;
+  --accent-crimson-glow: rgba(255, 26, 60, 0.4);
+  --accent-crimson-subtle: rgba(255, 26, 60, 0.12);
+
+  /* Text Hierarchy */
+  --text-primary: #F2F4F7;
+  --text-secondary: #C9CDD3;
+  --text-muted: #8C929C;
+  --text-subtle: #565A63;
+
+  /* Typography Stacks */
+  --font-display: 'Syne', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-body: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
+
+  /* Spacing Scale */
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4.5rem;
+  --space-4xl: 6rem;
+  --space-5xl: 8rem;
+
+  /* Layout */
+  --max-width: 1400px;
+  --header-height: 80px;
+
+  /* Transitions */
+  --ease-fluid: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-snappy: cubic-bezier(0.25, 1, 0.5, 1);
+  --transition-fast: 0.18s var(--ease-snappy);
+  --transition-normal: 0.35s var(--ease-fluid);
+  --transition-slow: 0.65s var(--ease-fluid);
+}
+
+/* --------------------------------------------------------------------------
+   CSS Reset & Box Sizing
+   -------------------------------------------------------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  font-size: 16px;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.65;
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* --------------------------------------------------------------------------
+   Tactile Film Grain Overlay (Simulating Physical Print/Metal Texture)
+   -------------------------------------------------------------------------- */
+.film-grain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0.04;
+  background-image: url('../assets/noise.svg');
+  background-repeat: repeat;
+  background-size: 160px 160px;
+}
+
+/* --------------------------------------------------------------------------
+   Typography Foundation
+   -------------------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  color: var(--chrome-highlight);
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+}
+
+p {
+  color: var(--text-secondary);
+  font-weight: 400;
+  max-width: 68ch;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+button {
+  font-family: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+img, svg {
+  display: block;
+  max-width: 100%;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* --------------------------------------------------------------------------
+   Accessible Selection & Focus States
+   -------------------------------------------------------------------------- */
+::selection {
+  background-color: var(--accent-crimson);
+  color: #FFFFFF;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-crimson);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   Accessibility Helpers
+   -------------------------------------------------------------------------- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.skip-link {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.75rem 1.25rem;
+  background: var(--accent-crimson);
+  color: #FFFFFF;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  z-index: 10000;
+  transform: translateY(-200%);
+  transition: transform var(--transition-fast);
+  border-radius: 4px;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+/* --------------------------------------------------------------------------
+   Layout Containers & Editorial Utilities
+   -------------------------------------------------------------------------- */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(1.25rem, 5vw, 4rem);
+  padding-right: clamp(1.25rem, 5vw, 4rem);
+}
+
+.mono-tag {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.mono-accent {
+  font-family: var(--font-mono);
+  color: var(--accent-crimson);
+  font-weight: 600;
+}
